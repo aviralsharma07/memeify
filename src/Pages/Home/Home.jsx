@@ -5,6 +5,7 @@ import "./Home.css";
 
 const Home = () => {
   const [data, setData] = useState([]);
+
   useEffect(() => {
     getAllMemes().then((memes) => setData(memes.data.memes));
   }, []);
@@ -12,7 +13,7 @@ const Home = () => {
   return (
     <div className="row">
       {data.map((meme, index) => (
-        <MemeCard key={index} img={meme.url} title={meme.name} />
+        <MemeCard className="card" key={index} img={meme.url} title={meme.name} />
       ))}
     </div>
   );

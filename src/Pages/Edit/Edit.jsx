@@ -3,11 +3,13 @@ import { useSearchParams } from "react-router-dom";
 import Text from "../../Components/Text";
 import Button from "react-bootstrap/Button";
 import { exportComponentAsJPEG } from "react-component-export-image";
+import { useNavigate } from "react-router-dom";
 
 const Edit = () => {
   const [params] = useSearchParams();
   const [count, setCount] = useState(0);
   const memeRef = createRef();
+  const navigate = useNavigate();
   //   console.log(params.get("url"));
 
   const addText = () => {
@@ -25,8 +27,13 @@ const Edit = () => {
           ))}
       </div>
       <Button onClick={addText}>Add Text</Button>
+      &nbsp;&nbsp;
       <Button variant="success" onClick={(e) => exportComponentAsJPEG(memeRef)}>
         Save
+      </Button>
+      &nbsp;&nbsp;
+      <Button variant="dark" onClick={(e) => navigate("/")}>
+        New Meme
       </Button>
     </div>
   );

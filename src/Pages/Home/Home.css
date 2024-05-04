@@ -1,0 +1,13 @@
+.row {
+  /* background: pink; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  /* background: green; */
+  padding: 10px;
+  height: fit-content;
+}
