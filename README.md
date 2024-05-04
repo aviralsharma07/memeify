@@ -16,7 +16,9 @@ Memeify is a meme generator application built using React and Vite. It allows us
 
 ## Screenshots
 
-![Memeify](/path/to/memeify-screenshot.png)
+![Memeify](src/assets/memeify1.png)
+![Memeify](src/assets/memeify2.png)
+![Memeify](src/assets/memeify3.png)
 
 ## Tech Used
 
